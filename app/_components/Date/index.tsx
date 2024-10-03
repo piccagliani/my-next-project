@@ -1,5 +1,6 @@
 import styles from "./index.module.css";
 import Image from "next/image";
+import { formatDate } from "@/app/_libs/util";
 
 type Props = {
   date: string;
@@ -15,7 +16,7 @@ export default function Category({ date }: Props) {
         height={16}
         priority
       />
-      {date}
+      {formatDate(date)}
     </span>
   );
 }
