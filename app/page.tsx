@@ -6,6 +6,8 @@ import { getNewsList } from "@/app/_libs/microcms";
 import Hero from "@/app/_components/Hero";
 import NewList from "@/app/_components/NewsList";
 
+export const revalidate = 60;
+
 export default async function Home() {
   const data = await getNewsList({ limit: TOP_NEWS_LIMIT });
 
